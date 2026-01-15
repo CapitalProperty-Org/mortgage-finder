@@ -46,17 +46,17 @@ const Footer = () => {
                             </p>
 
                             {/* Email Subscription Form */}
-                            <form onSubmit={handleSubscribe} className="flex justify-center max-w-xl mx-auto">
+                            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row justify-center max-w-xl mx-auto gap-4 sm:gap-0">
                                 <input
                                     type="email"
                                     placeholder="Enter your email address"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="flex-1 px-5 py-3 rounded-l-3xl text-[0.95rem] focus:outline-none bg-white"
+                                    className="flex-1 px-5 py-3 rounded-full sm:rounded-l-3xl sm:rounded-r-none text-[0.95rem] focus:outline-none bg-white w-full"
                                 />
                                 <button
                                     type="submit"
-                                    className="bg-[#EA3934] text-white px-8 py-3 rounded-r-4xl font-bold text-[0.95rem] hover:bg-red-600 transition-colors"
+                                    className="bg-[#EA3934] text-white px-8 py-3 rounded-full sm:rounded-l-none sm:rounded-r-4xl font-bold text-[0.95rem] hover:bg-red-600 transition-colors w-full sm:w-auto"
                                 >
                                     Subscribe
                                 </button>

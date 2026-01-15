@@ -168,13 +168,13 @@ const Buy = () => {
                     </h2>
 
                     {/* Progress Steps */}
-                    <div className="flex items-start justify-center mb-14 px-4">
-                        <div className="flex items-center gap-0">
+                    <div className="flex items-start justify-center mb-14 px-4 overflow-x-auto no-scrollbar">
+                        <div className="flex items-center gap-0 min-w-fit px-2">
                             {steps.map((step, index) => (
                                 <React.Fragment key={index}>
                                     {/* Step Circle and Label */}
                                     <div className="flex flex-col items-center" style={{ width: 'auto' }}>
-                                        <div className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${index < currentStep
+                                        <div className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${index < currentStep
                                             ? 'bg-[#00C48C]'
                                             : index === currentStep
                                                 ? 'bg-[#3a307f]'
@@ -190,8 +190,8 @@ const Buy = () => {
 
                                     {/* Connecting Line */}
                                     {index < steps.length - 1 && (
-                                        <div className={`h-0.5 transition-all duration-300 mb-8 ${index < currentStep ? 'bg-[#00C48C]' : 'bg-[#D1D5DB]'
-                                            }`} style={{ width: '80px', marginLeft: '8px', marginRight: '8px' }}></div>
+                                        <div className={`h-0.5 transition-all duration-300 mb-8 mx-2 w-8 md:w-20 ${index < currentStep ? 'bg-[#00C48C]' : 'bg-[#D1D5DB]'
+                                            }`}></div>
                                     )}
                                 </React.Fragment>
                             ))}

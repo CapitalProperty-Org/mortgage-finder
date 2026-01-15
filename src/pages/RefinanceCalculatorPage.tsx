@@ -41,7 +41,7 @@ const RefinanceCalculatorPage = () => {
                 </div>
 
                 {/* Right: Image */}
-                <div className="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
+                <div className="hidden lg:block w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
                     {/* User requested "banner bg from assets". Using slide-1.jpeg as a likely alternative to hero.jpeg, 
                         or hero.jpeg if that's what they meant. Given the screen shot shows a family, 
                         and hero.jpeg is "Couple looking at laptop", I'll try slide-1 or just hero.jpeg again 

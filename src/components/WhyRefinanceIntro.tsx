@@ -19,7 +19,7 @@ const WhyRefinanceIntro = () => {
                     </div>
 
                     {/* Right Image */}
-                    <div className="w-full lg:w-1/2 relative lg:pl-10">
+                    <div className="hidden lg:block w-full lg:w-1/2 relative lg:pl-10">
                         <div className="relative rounded-[40px]">
                             {/* Red Background Accent (Matching Screenshot: Behind, offset to top-right/right) */}
                             {/* In WhyUseSection it was top-right. Here the screenshot shows red block primarily on top/right. 

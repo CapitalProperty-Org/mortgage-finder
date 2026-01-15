@@ -256,12 +256,20 @@ const Navbar = () => {
                         {/* Menu Items */}
                         <div className="flex-1 py-4">
                             {/* Buy */}
-                            <Link to="/qualification-journey" className="block px-6 py-4 text-[1rem] font-medium text-[#2D2D2D] hover:bg-gray-50 border-b border-gray-100">
+                            <Link
+                                to="/qualification-journey"
+                                className="block px-6 py-4 text-[1rem] font-medium text-[#2D2D2D] hover:bg-gray-50 border-b border-gray-100"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Buy
                             </Link>
 
                             {/* Refinance */}
-                            <Link to="/refinance" className="block px-6 py-4 text-[1rem] font-medium text-[#2D2D2D] hover:bg-gray-50 border-b border-gray-100">
+                            <Link
+                                to="/refinance"
+                                className="block px-6 py-4 text-[1rem] font-medium text-[#2D2D2D] hover:bg-gray-50 border-b border-gray-100"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Refinance
                             </Link>
 
@@ -284,6 +292,7 @@ const Navbar = () => {
                                                 key={link.name}
                                                 to={link.href}
                                                 className="block px-10 py-3 text-[0.95rem] text-[#666] hover:text-brand-primary"
+                                                onClick={() => setIsOpen(false)}
                                             >
                                                 {link.name}
                                             </Link>
@@ -299,6 +308,7 @@ const Navbar = () => {
                                     `block px-6 py-4 text-[1rem] font-medium border-b border-gray-100 ${isActive ? 'text-brand-primary bg-gray-50' : 'text-[#2D2D2D] hover:bg-gray-50'
                                     }`
                                 }
+                                onClick={() => setIsOpen(false)}
                             >
                                 Commercial Finance
                             </NavLink>
@@ -318,20 +328,25 @@ const Navbar = () => {
                                 {activeDropdown === 'resources-mobile' && (
                                     <div className="bg-gray-50">
                                         {resourceLinks.map((link) => (
-                                            <a
+                                            <Link
                                                 key={link.name}
-                                                href={link.href}
+                                                to={link.href}
                                                 className="block px-10 py-3 text-[0.95rem] text-[#666] hover:text-brand-primary"
+                                                onClick={() => setIsOpen(false)}
                                             >
                                                 {link.name}
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 )}
                             </div>
 
                             {/* Find a Property */}
-                            <a href="#" className="block px-6 py-4 text-[1rem] font-medium text-[#2D2D2D] hover:bg-gray-50 border-b border-gray-100">
+                            <a
+                                href="#"
+                                className="block px-6 py-4 text-[1rem] font-medium text-[#2D2D2D] hover:bg-gray-50 border-b border-gray-100"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Find a Property
                             </a>
                         </div>
