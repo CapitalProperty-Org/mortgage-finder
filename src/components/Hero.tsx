@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -43,12 +44,12 @@ const Hero = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="#" className="inline-flex items-center justify-center px-8 py-3.5 bg-[#EA3934] text-white text-[15px] font-bold rounded-[4px] hover:bg-red-600 transition-colors shadow-sm min-w-[170px]">
+                                <Link to="/qualification-journey#get-pre-approved" className="inline-flex items-center justify-center px-8 py-3.5 bg-[#EA3934] text-white text-[15px] font-bold rounded-[4px] hover:bg-red-600 transition-colors shadow-sm min-w-[170px]">
                                     Get Pre-Approved <ArrowRight size={18} className="ml-2" />
-                                </a>
-                                <a href="#" className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-[#3a307f] border border-[#3a307f] text-[15px] font-bold rounded-[4px] hover:bg-gray-50 transition-colors min-w-[210px]">
+                                </Link>
+                                <Link to="/mortgage-calculator" className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-[#3a307f] border border-[#3a307f] text-[15px] font-bold rounded-[4px] hover:bg-gray-50 transition-colors min-w-[210px]">
                                     Mortgage Calculator <ArrowRight size={18} className="ml-2" />
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>

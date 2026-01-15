@@ -76,9 +76,9 @@ const PhoneInput: React.FC<PhoneInputProps> = ({ value, onChange, placeholder = 
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     placeholder={placeholder}
-                    className="w-full pl-24 pr-5 py-4 border-2 border-gray-200 rounded-lg text-[0.95rem] focus:outline-none focus:border-[#3a307f] placeholder:text-gray-400"
+                    className="w-full pl-24 pr-5 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#3a307f] focus:border-transparent placeholder:text-gray-400"
                 />
-                <span className="absolute left-[72px] top-1/2 -translate-y-1/2 text-[#666] font-medium text-[0.95rem] pointer-events-none">
+                <span className="absolute left-[72px] top-1/2 -translate-y-1/2 text-[#2D2D2D] font-medium text-sm pointer-events-none">
                     {selectedCountry.dialCode}
                 </span>
             </div>

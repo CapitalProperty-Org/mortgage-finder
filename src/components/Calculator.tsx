@@ -75,9 +75,9 @@ const Calculator = () => {
                                     setDownPayment(newDown);
                                     setLoanAmount(val - newDown);
                                 }}
-                                className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white"
+                                className="w-full px-5 py-2 border border-gray-300 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white transition-colors"
                             />
-                            <div className="relative mt-4">
+                            <div className="relative mt-[-15px]">
                                 <input
                                     type="range"
                                     min="300000"
@@ -106,7 +106,7 @@ const Calculator = () => {
                         {/* Residency Status */}
                         <div>
                             <label className="block text-[#666] text-[0.95rem] font-semibold mb-3">Residency Status</label>
-                            <div className="grid grid-cols-3 gap-0 border-2 border-gray-200 rounded-lg overflow-hidden">
+                            <div className="grid grid-cols-3 gap-0 border border-gray-300 rounded-lg overflow-hidden">
                                 {(['UAE national', 'UAE resident', 'Non resident'] as ResidencyStatus[]).map((status) => (
                                     <button
                                         key={status}
@@ -134,13 +134,13 @@ const Calculator = () => {
                                         setDownPayment(val);
                                         setLoanAmount(purchasePrice - val);
                                     }}
-                                    className="w-full px-5 py-3.5 pr-20 border-2 border-gray-200 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white"
+                                    className="w-full px-5 py-2 pr-20 border border-gray-300 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white transition-colors"
                                 />
                                 <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#3a307f] font-bold text-[1.1rem]">
                                     {downPercent}%
                                 </span>
                             </div>
-                            <div className="relative mt-4">
+                            <div className="relative mt-[-15px]">
                                 <input
                                     type="range"
                                     min={Math.round(purchasePrice * (constraints.minDownPercent / 100))}
@@ -176,13 +176,13 @@ const Calculator = () => {
                                         setLoanAmount(val);
                                         setDownPayment(purchasePrice - val);
                                     }}
-                                    className="w-full px-5 py-3.5 pr-20 border-2 border-gray-200 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white"
+                                    className="w-full px-5 py-2 pr-20 border border-gray-300 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white transition-colors"
                                 />
                                 <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#3a307f] font-bold text-[1.1rem]">
                                     {loanPercent}%
                                 </span>
                             </div>
-                            <div className="relative mt-4">
+                            <div className="relative mt-[-15px]">
                                 <input
                                     type="range"
                                     min={Math.round(purchasePrice * 0.05)}
@@ -213,9 +213,9 @@ const Calculator = () => {
                                 type="number"
                                 value={loanPeriod}
                                 onChange={(e) => setLoanPeriod(Number(e.target.value) || 1)}
-                                className="w-full px-5 py-3.5 border-2 border-gray-200 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white"
+                                className="w-full px-5 py-2 border border-gray-300 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white transition-colors"
                             />
-                            <div className="relative mt-4">
+                            <div className="relative mt-[-15px]">
                                 <input
                                     type="range"
                                     min="1"
@@ -237,19 +237,19 @@ const Calculator = () => {
                         {/* Interest Rate */}
                         <div>
                             <label className="block text-[#666] text-[0.95rem] font-semibold mb-3">Interest rate</label>
-                            <div className="relative">
+                            <div className="relative ">
                                 <input
                                     type="number"
                                     step="0.01"
                                     value={interestRate}
                                     onChange={(e) => setInterestRate(Number(e.target.value) || 1)}
-                                    className="w-full px-5 py-3.5 pr-16 border-2 border-gray-200 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white"
+                                    className="w-full px-5 py-2 pr-16 border border-gray-300 rounded-lg text-[1.15rem] font-semibold text-[#3a307f] focus:outline-none focus:border-[#3a307f] bg-white transition-colors"
                                 />
                                 <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#3a307f] font-bold text-[1.1rem]">
                                     %
                                 </span>
                             </div>
-                            <div className="relative mt-4">
+                            <div className="relative mt-[-15px]">
                                 <input
                                     type="range"
                                     min="1"
@@ -481,7 +481,7 @@ const Calculator = () => {
                 .react-international-phone-input-container .react-international-phone-input {
                     width: 100%;
                     padding: 16px 20px;
-                    border: 2px solid #e5e7eb !important;
+                    border: 1px solid #d1d5db !important;
                     border-radius: 8px;
                     font-size: 0.95rem;
                     outline: none;

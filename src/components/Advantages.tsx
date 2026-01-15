@@ -51,7 +51,7 @@ const Advantages = () => {
                     {advantages.map((advantage, index) => (
                         <div key={index} className="relative bg-white px-10 py-12 rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.08)]">
                             {/* Red/Orange dot positioned absolutely at top-right corner - 0px offset */}
-                            <div className="absolute top-0 right-0 border-gray-100 border-[7px] w-12 h-12 bg-[#FF6B6B] rounded-full translate-x-[40%] -translate-y-[40%]"></div>
+                            <div className="absolute top-3 right-2 border-gray-100 border-[7px] w-13 h-13 bg-[#FF6B6B] rounded-full translate-x-[40%] -translate-y-[40%]"></div>
 
                             {/* Icon */}
                             <div className="mb-8">

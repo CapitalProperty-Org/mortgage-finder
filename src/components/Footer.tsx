@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -9,34 +10,59 @@ const Footer = () => {
         console.log('Subscribe:', email);
     };
 
+    const location = useLocation();
+    const isRefinancePage = location.pathname === '/equity-release' || location.pathname === '/refinance-calculator';
+
     return (
         <footer className="font-sans">
-            {/* Newsletter Section - Purple Background */}
+            {/* Newsletter / CTA Section - Purple Background */}
             <div className="bg-[#3a307f] py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-[2rem] font-bold text-white mb-4">
-                        Why you should subscribe to our newsletter
-                    </h2>
-                    <p className="text-white/90 text-[1rem] mb-8 max-w-3xl mx-auto">
-                        Buying, or refinancing, in Dubai and the UAE can be frustrating and complicated. Mortgage Finder is dedicated to ensuring you get the best mortgage advice and that your interests are protected.
-                    </p>
+                    {isRefinancePage ? (
+                        /* Refinance Page CTA */
+                        <>
+                            <h2 className="text-[2rem] font-bold text-white mb-4">
+                                Get Started Today
+                            </h2>
+                            <p className="text-white/90 text-[1rem] mb-8 max-w-3xl mx-auto">
+                                Unlock the value of your home and gain the financial freedom you desire. Contact Mortgage Finder
+                                today to explore your options with one of our advisors.
+                            </p>
+                            <a
+                                href="#"
+                                className="inline-block bg-white text-[#3a307f] px-8 py-3.5 rounded-[4px] font-bold text-[0.95rem] hover:bg-gray-100 transition-colors"
+                            >
+                                Contact Mortgage Advisor →
+                            </a>
+                        </>
+                    ) : (
+                        /* Default Newsletter CTA */
+                        <>
+                            <h2 className="text-[2rem] font-bold text-white mb-4">
+                                Why you should subscribe to our newsletter
+                            </h2>
+                            <p className="text-white/90 text-[1rem] mb-8 max-w-3xl mx-auto">
+                                Buying, or refinancing, in Dubai and the UAE can be frustrating and complicated. Mortgage Finder is dedicated to ensuring you get the best mortgage advice and that your interests are protected.
+                            </p>
 
-                    {/* Email Subscription Form */}
-                    <form onSubmit={handleSubscribe} className="flex justify-center max-w-xl mx-auto">
-                        <input
-                            type="email"
-                            placeholder="Enter your email address"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="flex-1 px-5 py-3 rounded-l-md text-[0.95rem] focus:outline-none bg-white"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-[#EA3934] text-white px-8 py-3 rounded-r-md font-bold text-[0.95rem] hover:bg-red-600 transition-colors"
-                        >
-                            Subscribe
-                        </button>
-                    </form>
+                            {/* Email Subscription Form */}
+                            <form onSubmit={handleSubscribe} className="flex justify-center max-w-xl mx-auto">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email address"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className="flex-1 px-5 py-3 rounded-l-3xl text-[0.95rem] focus:outline-none bg-white"
+                                />
+                                <button
+                                    type="submit"
+                                    className="bg-[#EA3934] text-white px-8 py-3 rounded-r-4xl font-bold text-[0.95rem] hover:bg-red-600 transition-colors"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </>
+                    )}
                 </div>
             </div>
 
@@ -58,22 +84,22 @@ const Footer = () => {
                             <h3 className="text-[#333] font-bold text-[1rem] mb-4">Calculators</h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="#" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/mortgage-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Mortgage Calculator
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/rent-vs-buy-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Rent vs Buy Calculator
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/refinance-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Refinance Calculator
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/eligibility-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Eligibility Calculator
                                     </a>
                                 </li>
@@ -85,17 +111,17 @@ const Footer = () => {
                             <h3 className="text-[#333] font-bold text-[1rem] mb-4">Quick Links</h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="#" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/how-it-works" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         How It Works
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/faq" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         FAQ
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <a href="/blog" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Blog
                                     </a>
                                 </li>
@@ -110,13 +136,13 @@ const Footer = () => {
                     <div className="pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center gap-4">
                         {/* Legal Links */}
                         <div className="flex flex-wrap gap-6 text-[0.85rem]">
-                            <a href="#" className="text-[#666] hover:text-[#3a307f] transition-colors">
+                            <a href="/terms-and-conditions" className="text-[#666] hover:text-[#3a307f] transition-colors">
                                 Terms & Conditions
                             </a>
-                            <a href="#" className="text-[#666] hover:text-[#3a307f] transition-colors">
+                            <a href="/privacy-policy" className="text-[#666] hover:text-[#3a307f] transition-colors">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="text-[#666] hover:text-[#3a307f] transition-colors">
+                            <a href="/cookies-policy" className="text-[#666] hover:text-[#3a307f] transition-colors">
                                 Cookies Policy
                             </a>
                         </div>
