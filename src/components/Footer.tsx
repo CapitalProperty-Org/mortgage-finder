@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -84,24 +84,24 @@ const Footer = () => {
                             <h3 className="text-[#333] font-bold text-[1rem] mb-4">Calculators</h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="/mortgage-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/mortgage-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Mortgage Calculator
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/rent-vs-buy-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/rent-vs-buy-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Rent vs Buy Calculator
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/refinance-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/refinance-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Refinance Calculator
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/eligibility-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/eligibility-calculator" className="border-b border-[#666] p-[1px] text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Eligibility Calculator
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -111,19 +111,19 @@ const Footer = () => {
                             <h3 className="text-[#333] font-bold text-[1rem] mb-4">Quick Links</h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="/how-it-works" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/how-it-works" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         How It Works
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/faq" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/faq" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         FAQ
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/blog" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
+                                    <Link to="/blog" className="text-[#666] text-[0.9rem] hover:text-[#3a307f] transition-colors">
                                         Blog
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -136,15 +136,15 @@ const Footer = () => {
                     <div className="pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center gap-4">
                         {/* Legal Links */}
                         <div className="flex flex-wrap gap-6 text-[0.85rem]">
-                            <a href="/terms-and-conditions" className="text-[#666] hover:text-[#3a307f] transition-colors">
+                            <Link to="/terms-and-conditions" className="text-[#666] hover:text-[#3a307f] transition-colors">
                                 Terms & Conditions
-                            </a>
-                            <a href="/privacy-policy" className="text-[#666] hover:text-[#3a307f] transition-colors">
+                            </Link>
+                            <Link to="/privacy-policy" className="text-[#666] hover:text-[#3a307f] transition-colors">
                                 Privacy Policy
-                            </a>
-                            <a href="/cookies-policy" className="text-[#666] hover:text-[#3a307f] transition-colors">
+                            </Link>
+                            <Link to="/cookies-policy" className="text-[#666] hover:text-[#3a307f] transition-colors">
                                 Cookies Policy
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Social Media Icons */}
