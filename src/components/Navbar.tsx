@@ -67,16 +67,15 @@ const Navbar = () => {
                                 onMouseEnter={() => setActiveDropdown('calculators')}
                                 onMouseLeave={() => setActiveDropdown(null)}
                             >
-                                <a
-                                    href="#"
-                                    className="group flex items-center text-[#555] hover:text-brand-primary hover:bg-purple-50 px-3 py-2 rounded-md text-[15px] font-semibold transition-all relative"
+                                <button
+                                    className="group flex items-center text-[#555] hover:text-brand-primary hover:bg-purple-50 px-3 py-2 rounded-md text-[15px] font-semibold transition-all relative focus:outline-none"
                                 >
                                     <span className="relative flex items-center">
                                         Calculators
                                         <ChevronDown size={14} className="ml-1.5 text-[#999] stroke-[2.5px] group-hover:text-brand-primary" />
                                         <span className="absolute inset-x-0 -bottom-[10px] h-1 bg-transparent group-hover:bg-brand-primary group-active:bg-brand-primary transition-all"></span>
                                     </span>
-                                </a>
+                                </button>
                                 {activeDropdown === 'calculators' && (
                                     <div className="absolute top-full left-0 mt-0 bg-white shadow-lg rounded-b-md min-w-[220px] py-2">
                                         {calculatorLinks.map((link) => (
@@ -148,16 +147,15 @@ const Navbar = () => {
                                     onMouseEnter={() => setActiveDropdown('resources')}
                                     onMouseLeave={() => setActiveDropdown(null)}
                                 >
-                                    <a
-                                        href="#"
-                                        className="group flex items-center text-[#555] hover:text-brand-primary hover:bg-purple-50 px-3 py-2 rounded-md text-[15px] font-semibold transition-all relative"
+                                    <button
+                                        className="group flex items-center text-[#555] hover:text-brand-primary hover:bg-purple-50 px-3 py-2 rounded-md text-[15px] font-semibold transition-all relative focus:outline-none"
                                     >
                                         <span className="relative flex items-center">
                                             Resources
                                             <ChevronDown size={14} className="ml-1.5 text-[#999] stroke-[2.5px] group-hover:text-brand-primary" />
                                             <span className="absolute inset-x-0 -bottom-[10px] h-1 bg-transparent group-hover:bg-brand-primary group-active:bg-brand-primary transition-all"></span>
                                         </span>
-                                    </a>
+                                    </button>
                                     {activeDropdown === 'resources' && (
                                         <div className="absolute top-full left-0 mt-0 bg-white shadow-lg rounded-b-md min-w-[180px] py-2">
                                             {resourceLinks.map((link) => (

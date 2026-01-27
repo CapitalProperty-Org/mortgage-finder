@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Info, ArrowRight, X } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 
@@ -336,7 +337,7 @@ const EligibilityCalculator = () => {
                             </button>
 
                             <p className="text-[10px] text-gray-400 text-center mt-4">
-                                By continuing you accept our <a href="#" className="underline hover:text-gray-600">Terms of Use</a> and <a href="#" className="underline hover:text-gray-600">Privacy Policy</a>
+                                By continuing you accept our <Link to="/terms-and-conditions" className="underline hover:text-gray-600">Terms of Use</Link> and <Link to="/privacy-policy" className="underline hover:text-gray-600">Privacy Policy</Link>
                             </p>
                         </div>
                     </div>

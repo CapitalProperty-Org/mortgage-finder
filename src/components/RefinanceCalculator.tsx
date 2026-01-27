@@ -1,5 +1,7 @@
+
 import React, { useState } from 'react';
 import { ChevronRight, ChevronLeft, Calendar, Info } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import CustomSelect from './CustomSelect';
@@ -184,10 +186,10 @@ const RefinanceCalculator = () => {
                             {tabs.map(tab => (
                                 <button
                                     key={tab.id}
-                                    className={`pb-3 pr-6 text-sm font-medium transition-colors relative ${activeTab === tab.id
+                                    className={`pb - 3 pr - 6 text - sm font - medium transition - colors relative ${activeTab === tab.id
                                         ? 'text-[#3a307f]'
                                         : 'text-gray-400 hover:text-gray-600'
-                                        }`}
+                                        } `}
                                 >
                                     {tab.label}
                                     {activeTab === tab.id && (
@@ -221,7 +223,7 @@ const RefinanceCalculator = () => {
                                         placeholder="Enter Original Loan Amount"
                                         value={formData.originalLoanAmount}
                                         onChange={handleInputChange}
-                                        className={`w-full px-4 py-3 rounded-lg border ${errors.originalLoanAmount ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                        className={`w - full px - 4 py - 3 rounded - lg border ${errors.originalLoanAmount ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                     />
                                     {errors.originalLoanAmount && <p className="text-red-500 text-[10px] mt-1">{errors.originalLoanAmount}</p>}
                                 </div>
@@ -234,7 +236,7 @@ const RefinanceCalculator = () => {
                                         placeholder="Enter Current Property Evaluation"
                                         value={formData.currentPropertyValue}
                                         onChange={handleInputChange}
-                                        className={`w-full px-4 py-3 rounded-lg border ${errors.currentPropertyValue ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                        className={`w - full px - 4 py - 3 rounded - lg border ${errors.currentPropertyValue ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                     />
                                     {errors.currentPropertyValue && <p className="text-red-500 text-[10px] mt-1">{errors.currentPropertyValue}</p>}
                                 </div>
@@ -269,7 +271,7 @@ const RefinanceCalculator = () => {
                                             name="startDate"
                                             value={formData.startDate}
                                             onChange={handleInputChange}
-                                            className={`w-full px-4 py-3 rounded-lg border ${errors.startDate ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                            className={`w - full px - 4 py - 3 rounded - lg border ${errors.startDate ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                         />
                                     </div>
                                     {errors.startDate && <p className="text-red-500 text-[10px] mt-1">{errors.startDate}</p>}
@@ -284,7 +286,7 @@ const RefinanceCalculator = () => {
                                         placeholder="Enter Fixed Interest Rate"
                                         value={formData.interestRate}
                                         onChange={handleInputChange}
-                                        className={`w-full px-4 py-3 rounded-lg border ${errors.interestRate ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                        className={`w - full px - 4 py - 3 rounded - lg border ${errors.interestRate ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                     />
                                     {errors.interestRate && <p className="text-red-500 text-[10px] mt-1">{errors.interestRate}</p>}
                                 </div>
@@ -326,7 +328,7 @@ const RefinanceCalculator = () => {
                                         placeholder="Enter your monthly income"
                                         value={formData.monthlyIncome}
                                         onChange={handleInputChange}
-                                        className={`w-full px-4 py-3 rounded-lg border ${errors.monthlyIncome ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                        className={`w - full px - 4 py - 3 rounded - lg border ${errors.monthlyIncome ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                     />
                                     {errors.monthlyIncome && <p className="text-red-500 text-[10px] mt-1">{errors.monthlyIncome}</p>}
                                 </div>
@@ -368,7 +370,7 @@ const RefinanceCalculator = () => {
                                             name="borrowerDOB"
                                             value={formData.borrowerDOB}
                                             onChange={handleInputChange}
-                                            className={`w-full px-4 py-3 rounded-lg border ${errors.borrowerDOB ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                            className={`w - full px - 4 py - 3 rounded - lg border ${errors.borrowerDOB ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                         />
                                     </div>
                                     {errors.borrowerDOB && <p className="text-red-500 text-[10px] mt-1">{errors.borrowerDOB}</p>}
@@ -383,7 +385,7 @@ const RefinanceCalculator = () => {
                                         placeholder="Enter Current Mortgage Balance" // Screenshot has "9,000" as example value, using placeholder
                                         value={formData.currentMortgageBalance}
                                         onChange={handleInputChange}
-                                        className={`w-full px-4 py-3 rounded-lg border ${errors.currentMortgageBalance ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                        className={`w - full px - 4 py - 3 rounded - lg border ${errors.currentMortgageBalance ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                     />
                                     {errors.currentMortgageBalance && <p className="text-red-500 text-[10px] mt-1">{errors.currentMortgageBalance}</p>}
                                 </div>
@@ -397,7 +399,7 @@ const RefinanceCalculator = () => {
                                         placeholder="Enter Desired Equity Release"
                                         value={formData.desiredEquityRelease}
                                         onChange={handleInputChange}
-                                        className={`w-full px-4 py-3 rounded-lg border ${errors.desiredEquityRelease ? 'border-red-500' : 'border-gray-200'} text-gray-600 focus:outline-none focus:border-[#3a307f]`}
+                                        className={`w - full px - 4 py - 3 rounded - lg border ${errors.desiredEquityRelease ? 'border-red-500' : 'border-gray-200'} text - gray - 600 focus: outline - none focus: border - [#3a307f]`}
                                     />
                                     {errors.desiredEquityRelease && <p className="text-red-500 text-[10px] mt-1">{errors.desiredEquityRelease}</p>}
                                 </div>
@@ -410,10 +412,10 @@ const RefinanceCalculator = () => {
                             <button
                                 onClick={handleBack}
                                 disabled={activeTab === 'current-loan'}
-                                className={`flex items-center px-6 py-3 rounded font-medium text-sm transition-colors ${activeTab === 'current-loan'
+                                className={`flex items - center px - 6 py - 3 rounded font - medium text - sm transition - colors ${activeTab === 'current-loan'
                                     ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                                    }`}
+                                    } `}
                             >
                                 <ChevronLeft size={18} className="mr-2" />
                                 Previous
@@ -592,7 +594,7 @@ const RefinanceCalculator = () => {
                             </form>
 
                             <p className="text-[10px] text-center text-gray-400 mt-4">
-                                By continuing you accept our <a href="#" className="underline">Terms of Use</a> and <a href="#" className="underline">Privacy Policy</a>
+                                By continuing you accept our <Link to="/terms-and-conditions" className="underline">Terms of Use</Link> and <Link to="/privacy-policy" className="underline">Privacy Policy</Link>
                             </p>
                         </div>
                     </div>
@@ -631,7 +633,7 @@ const RefinanceCalculator = () => {
                 .react-international-phone-country-selector-button__flag-emoji {
                     font-size: 24px;
                 }
-                
+
                 /* Dropdown Styling */
                 .react-international-phone-country-selector-dropdown {
                     border: 2px solid #e5e7eb !important;
@@ -641,7 +643,7 @@ const RefinanceCalculator = () => {
                     padding: 8px 0 !important;
                     max-height: 320px !important;
                 }
-                
+
                 /* Search Input */
                 .react-international-phone-country-selector-dropdown__search-container {
                     padding: 12px 16px !important;
@@ -663,7 +665,7 @@ const RefinanceCalculator = () => {
                     border-color: #3a307f !important;
                     outline: none !important;
                 }
-                
+
                 /* Country List Items */
                 .react-international-phone-country-selector-dropdown__list-item {
                     padding: 14px 20px !important;
